@@ -1,1 +1,238 @@
-# Technicalbook.com
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering the Code | E-book</title>
+    <style>
+        /* 1. GENERAL STYLES */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Makes clicking links scroll smoothly */
+        }
+
+        /* 2. NAVIGATION */
+        nav {
+            background: #2c3e50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #e67e22;
+        }
+
+        /* 3. HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 50px;
+        }
+
+        .book-cover img {
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        /* 4. BUTTONS */
+        .btn {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* 5. FEATURES SECTION */
+        .features {
+            background-color: #f4f7f6;
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #e67e22;
+        }
+
+        /* 6. TESTIMONIALS */
+        .testimonials {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            border-left: 5px solid #3498db;
+            padding: 25px;
+            max-width: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-style: italic;
+        }
+
+        /* 7. CONTACT FORM */
+        .contact-section {
+            padding: 80px 20px;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 30px auto 0;
+            text-align: left;
+        }
+
+        .form-group { margin-bottom: 15px; }
+
+        .form-group label { display: block; margin-bottom: 5px; }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .features, .testimonial-grid { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BookShelf</div>
+        <div>
+            <a href="#features">Features</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Book Cover">
+        </div>
+        <div class="hero-text">
+            <h1>Mastering the Code</h1>
+            <p class="price">$19.99</p>
+            <p>The ultimate guide for beginners to learn web development from scratch. Build projects, learn logic, and launch your career.</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-item">
+            <h3>Step-by-Step</h3>
+            <p>No jargon. Just clear, easy-to-follow coding lessons.</p>
+        </div>
+        <div class="feature-item">
+            <h3>10+ Projects</h3>
+            <p>Build real websites while you learn the theory.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Free Updates</h3>
+            <p>Get all future editions of the book at no extra cost.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Readers Say</h2>
+        <div class="testimonial-grid">
+            <div class="card">
+                <p>"This is exactly what I needed to start my journey. Highly recommend!"</p>
+                <strong>- Alex R.</strong>
+            </div>
+            <div class="card">
+                <p>"The best $20 I've ever spent on my education."</p>
+                <strong>- Maria G.</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea rows="4" placeholder="How can I help?"></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
